@@ -1,0 +1,54 @@
+ <div class="row"> 
+    <div class="col-sm-1"></div>
+    <div class="col-md-8">
+
+       <!-- page header/subheader -->
+
+       <div class="page-header">
+          Feedback Template
+          <div class="sub-header">Add new Feedback Template
+          </div>
+      </div>
+
+      <!-- Client-Account pageheader input--> 
+      <div class="data-form">
+          <form name="clientsForm" id="clientsForm" class="form-vertical" novalidate
+          ng-model-options="{updateOn:'default blur',debounce:{'default':500,'blur':0}}">
+
+          <!--Feedback Title-->
+          <div class="form-group"> 
+            <input type="text" class="form-control" placeholder="Title" id="name" name="name" ng-model="clients.name" required ng-minlength="3" ng-maxlength="20" floating-validation/>
+        </div>                  
+
+      <!-- vertical Type input-->
+      <div class="form-group"> 
+        <input type="text" class="form-control" placeholder="vertical Names" id="vertical" name="vertical" ng-model="clients.vertical" required ng-minlength="3" ng-maxlength="200" floating-validation/>
+    </div>
+
+    <!-- competitors Type input-->
+    <div class="form-group"> 
+        <input type="text" class="form-control" placeholder="Competitor Names" id="competitors" name="competitors" ng-model="clients.competitors" required ng-minlength="3" ng-maxlength="200" floating-validation/>
+    </div>
+
+    <!-- regions checkbox-->
+    <div class="form-group"> 
+        <input type="text" class="form-control" placeholder="Region Places" id="regions" name="regions" ng-model="clients.regions" required ng-list floating-validation/>
+    </div>
+
+    <!-- offerings checkbox-->
+    <div class="form-group"> 
+        <input type="text" class="form-control" placeholder="Offerings Provied" id="offerings" name="offerings" ng-model="clients.offerings" required ng-minlength="3" ng-maxlength="200" ng-list floating-validation/>
+    </div>
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label"></label>
+      <div class="col-md-4">
+        <button type="submit" class="btn btn-success" 
+        ng-disabled="clientsForm.$invalid" ng-click="save()">Submit</button>
+        <button type="reset" class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</div>
+</div>
+</form>
+</div>
+</div>
